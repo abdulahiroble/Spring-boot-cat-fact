@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import com.catfact.catfact.Controller.EndPoints;
+import com.catfact.catfact.Controller.ControllerClass;
 import com.google.gson.Gson;
 
 public class CatService {
@@ -15,12 +15,12 @@ public class CatService {
         // Instantiate a Buffered Reader to consume the InputStream from the URL
         BufferedReader inputFromCatURL = new BufferedReader(new InputStreamReader(catURL.openStream()));
         // Map the data from Json to an object
-        EndPoints data = new Gson().fromJson(inputFromCatURL, EndPoints.class);
+        ControllerClass data = new Gson().fromJson(inputFromCatURL, ControllerClass.class);
         // Close the BufferedReader
         inputFromCatURL.close();
 
         // Get front page
-        System.out.println(data.frontPage());
+        System.out.println(data.toString());
 
         // Get Single
         // System.out.println(data.getSingle());

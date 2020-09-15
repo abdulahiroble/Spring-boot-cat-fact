@@ -1,4 +1,4 @@
-package com.catfact.catfact;
+package com.catfact.catfact.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
